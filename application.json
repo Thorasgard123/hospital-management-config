@@ -1,4 +1,10 @@
 {
+    "JwtSettings": {
+      "Issuer": "https://hospitalmanagementapi.com",
+      "Audience": "https://hospitalmanagementfrontend.com",
+      "Key": "Gx+NV3/HjB6Y8sJEXrwFh6L+wV4CvX0mnblKh4sQktc=",
+      "CacheInMinutes": 30
+    },
     "Logging": {
       "LogLevel": {
         "Default": "Information",
