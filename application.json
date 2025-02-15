@@ -1,17 +1,38 @@
 {
-  "JwtSettings": {
-    "Issuer": "https://hospitalmanagementapi.com",
-    "Audience": "https://hospitalmanagementfrontend.com",
-    "Key": "Gx+NV3/HjB6Y8sJEXrwFh6L+wV4CvX0mnblKh4sQktc="
-  },
-  "Logging": {
-    "LogLevel": {
-      "Default": "Information",
-      "Microsoft.AspNetCore": "Warning"
-    }
-  },
-  "ConnectionStrings": {
-    "DefaultConnection": "Server=ASGARDIAN-FORGE\\SQLEXPRESS;Database=HospitalManagement;Trusted_Connection=True;TrustServerCertificate=True;"
-  },
-  "AllowedHosts": "*"
-}
+    "JwtSettings": {
+      "Issuer": "https://hospitalmanagementapi.com",
+      "Audience": "https://hospitalmanagementfrontend.com",
+      "Key": "Gx+NV3/HjB6Y8sJEXrwFh6L+wV4CvX0mnblKh4sQktc=",
+      "CacheInMinutes": 30
+    },
+    "Logging": {
+      "LogLevel": {
+        "Default": "Information",
+        "Microsoft.AspNetCore": "Warning"
+      }
+    },
+    "ConnectionStrings": {
+      "DefaultConnection": "Server=ASGARDIAN-FORGE\\SQLEXPRESS;Database=HospitalManagement;Trusted_Connection=True;TrustServerCertificate=True;"
+    },
+    "Serilog": {
+      "MinimumLevel": {
+        "Default": "Information",
+        "Override": {
+          "Microsoft": "Warning", 
+          "System": "Warning" 
+        }
+      },
+      "WriteTo": [
+        {
+          "Name": "MSSqlServer",
+          "Args": {
+            "connectionString": "DefaultConnection",
+            "tableName": "Logs",
+            "autoCreateSqlTable": true
+          }
+        }
+      ]
+    },
+    "AllowedHosts": "*"
+  }
+  
