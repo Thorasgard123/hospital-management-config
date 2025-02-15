@@ -11,9 +11,6 @@
         "Microsoft.AspNetCore": "Warning"
       }
     },
-    "ConnectionStrings": {
-      "DefaultConnection": "Server=ASGARDIAN-FORGE\\SQLEXPRESS;Database=HospitalManagement;Trusted_Connection=True;TrustServerCertificate=True;"
-    },
     "Serilog": {
       "MinimumLevel": {
         "Default": "Information",
